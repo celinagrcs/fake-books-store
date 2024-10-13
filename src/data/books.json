@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Rayuela",
+    "author": "Julio Cortázar",
+    "price": "$",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.libreriasudestada.com.ar%2Fproductos%2Frayuela-julio-cortazar%2F&psig=AOvVaw1ErEAv7OaOCxdbTI_Lp4ka&ust=1728933964933000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDl0oiLjIkDFQAAAAAdAAAAABAE"
+  },
+  {
+    "id": 2,
+    "title": "CASA DE TIERRA Y SANGRE (CIUDAD MEDIALUNA 1)",
+    "author": "Sarah J. Maas",
+    "price": "$",
+    "image": "../assets/ciudad-medialuna.jpg"
+  },
+  {
+    "id": 3,
+    "title": "From Lukov with Love",
+    "author": "Mariana Zapata",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 4,
+    "name": "Beach Read",
+    "author": "Emily Henry",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 5,
+    "title": "Todos somos villanos",
+    "author": "William Shakespeare",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 6,
+    "title": "From Lukov with Love",
+    "author": "Mariana Zapata",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 7,
+    "name": "Beach Read",
+    "author": "Emily Henry",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 8,
+    "title": "From Lukov with Love",
+    "author": "Mariana Zapata",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  },
+  {
+    "id": 9,
+    "name": "Beach Read",
+    "author": "Emily Henry",
+    "price": "$",
+    "image": "./assets/rayuela1.png"
+  }
+]
+
