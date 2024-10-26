@@ -1,66 +1,89 @@
+
+
 [
   {
     "id": 1,
     "title": "Rayuela",
     "author": "Julio Cortázar",
-    "price": "$",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.libreriasudestada.com.ar%2Fproductos%2Frayuela-julio-cortazar%2F&psig=AOvVaw1ErEAv7OaOCxdbTI_Lp4ka&ust=1728933964933000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDl0oiLjIkDFQAAAAAdAAAAABAE"
+    "price": "$32.189",
+    "image": "./assets/rayuela1.png"
   },
   {
     "id": 2,
-    "title": "CASA DE TIERRA Y SANGRE (CIUDAD MEDIALUNA 1)",
+    "title": "CASA DE TIERRA Y SANGRE",
     "author": "Sarah J. Maas",
-    "price": "$",
-    "image": "../assets/ciudad-medialuna.jpg"
+    "price": "$34.000",
+    "image": "./assets/ciudad-medialuna.jpg"
   },
   {
     "id": 3,
-    "title": "From Lukov with Love",
-    "author": "Mariana Zapata",
-    "price": "$",
-    "image": "./assets/rayuela1.png"
+    "title": "Una Corte de Rosas y Espinas",
+    "author": "Sarah J. Maas",
+    "price": "$21.600",
+    "image": "./assets/acotar.jpg"
   },
   {
     "id": 4,
-    "name": "Beach Read",
+    "title": "Beach Read",
     "author": "Emily Henry",
     "price": "$",
-    "image": "./assets/rayuela1.png"
+    "image": "./assets/beach-read.jpg"
   },
   {
     "id": 5,
     "title": "Todos somos villanos",
     "author": "William Shakespeare",
-    "price": "$",
-    "image": "./assets/rayuela1.png"
+    "price": "$29.000",
+    "image": "./assets/todossomosvillanos.jpg"
   },
   {
     "id": 6,
-    "title": "From Lukov with Love",
-    "author": "Mariana Zapata",
-    "price": "$",
-    "image": "./assets/rayuela1.png"
+    "title": "La Tregua",
+    "author": "Mario Benedetti",
+    "price": "$10.710",
+    "image": "./assets/latregua.webp"
   },
   {
     "id": 7,
-    "name": "Beach Read",
-    "author": "Emily Henry",
-    "price": "$",
-    "image": "./assets/rayuela1.png"
+    "title": "París era una fiesta",
+    "author": "Ernest Hemingway",
+    "price": "$27.729",
+    "image": "./assets/paris.jpg"
   },
   {
     "id": 8,
     "title": "From Lukov with Love",
     "author": "Mariana Zapata",
     "price": "$",
-    "image": "./assets/rayuela1.png"
+    "image": "./assets/mariana.jpg"
   },
   {
     "id": 9,
-    "name": "Beach Read",
-    "author": "Emily Henry",
+    "title": "Trono de cristal",
+    "author": "Sarah J. Maas",
+    "price": "$32.936",
+    "image": "./assets/tronodecristal.webp"
+  },
+  {
+    "id": 9,
+    "title": "Harry Potter y la piedra filosofal",
+    "author": "J. K. Rowling",
     "price": "$",
-    "image": "./assets/rayuela1.png"
+    "image": "./assets/harrypotter.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Emma",
+    "author": "Jane Austen",
+    "price": "$",
+    "image": "./assets/emmajane.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Novela de Ajedrez",
+    "author": "Stefan Zweig",
+    "price": "$",
+    "image": "./assets/noveladeajedrez.jpg"
   }
 ]
 
