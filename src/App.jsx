@@ -5,25 +5,14 @@ import Navbar from './components/Navbar'
 import CartPage from './pages/CartPage'
 import ProgressBar from './components/ProgressBar';
 import BookPage from './pages/BookPage';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import InstructionsModal from './components/InstructionsModal';
 
 function App() {
-  const [showInstructions, setShowInstructions] = useState(false);
-
-  useEffect(() => {
-    const InstructionsShown = localStorage.getItem('instructionsShown');
-    if(!InstructionsShown) {
-      setShowInstructions(true);
-      localStorage.setItem('instructionsShown', 'true');
-    }
-  }, []);
+  const [showInstructions, setShowInstructions] = useState(true);
 
   return (
     <div>
-      {showInstructions && (
-        <InstructionsModal onClose={() => setShowInstructions(false)} />
-      )}
       <Router>
         <Navbar />
         <ProgressBar />
@@ -33,6 +22,9 @@ function App() {
           <Route path="/book/:id" element={<BookPage />} />
         </Routes>
       </Router>
+      {showInstructions && (
+        <InstructionsModal onClose={() => setShowInstructions(false)} />
+      )}
     </div>
   )
 }

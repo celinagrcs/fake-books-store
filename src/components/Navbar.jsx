@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <header>
       <nav className="fixed top-0 left-0 w-full z-40 bg-[#de4d86] p-4 flex justify-between ">
-        <h1 className="text-white font-bold">Book Store</h1>
+        <Link to='/'>
+          <h1 className="text-white font-bold">Book Store</h1>
+        </Link>
         <button>
           <Link to="/cart">
             <FaBagShopping className="text-white w-5 h-5" />
