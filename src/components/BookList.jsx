@@ -45,7 +45,7 @@ const BookList = () => {
     <>
     <main className="bg-white min-h-screen p-6">
       <section className="container mx-auto p-4">
-        <h2 className="font-extrabold text-3xl md:text-4xl py-5 text-center text-[#2a2a2a] mt-5 mb-6">🐞 Libros Disponibles 🐞</h2>
+        <h2 className="font-extrabold text-xl md:text-4xl py-5 text-center text-[#2a2a2a] mt-5 mb-6">🐞 Libros Disponibles 🐞</h2>
       </section>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {books.map((book) => (
