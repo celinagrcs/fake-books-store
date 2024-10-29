@@ -2,12 +2,17 @@ import { useParams } from 'react-router-dom';
 import books from '../data/books.json'
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useGame } from '../context/GameContext';
+import BugModal from '../components/BugModal';
 
 const BookPage = () => {
 	const { id } = useParams();
 	const book = books.find((book) => book.id === parseInt(id));
 	const [quantity, setQuantity] = useState(1);
 	const { addToCart } = useCart();
+  const { incrementProgress } = useGame();
+  const [showModal, setShowModal] = useState(false);
+
 
 	if (!book) {
 		return <p>Libro no encontrado</p>;
@@ -19,19 +24,40 @@ const BookPage = () => {
 		}
 	};
 
+  const handleBugSinopsis = () => {
+    incrementProgress('sinopsis');
+    setShowModal(true);
+  }
+
+  const handleBugImage = () => {
+    incrementProgress('book-img');
+    setShowModal(true);
+  }
+
+
+  const handleQuantityChange = () => {
+    const randomQuantity = Math.floor(Math.random() * 10) + 1;
+    setQuantity(randomQuantity);
+    incrementProgress('quantity-change');
+    setShowModal(true);
+  }
+
 	return (
-		<section className="flex flex-col items-center justify-center h-screen">
-		<div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-			<img src={book.image} alt={book.title} className="mb-4 w-full h-auto" />
+		<section className="flex flex-row items-center justify-evenly mt-24">
+    <div>
+      <img src={book.image} alt={book.title} onClick={handleBugImage} className="mb-4 w-full h-auto" />
+    </div>
+		<div className="p-8 w-full max-w-md">
 			<h1 className="text-2xl font-bold mb-2">{book.title}</h1>
 			<p className="text-gray-700 mb-2">Autor: {book.author}</p>
-			<p className="text-gray-900 font-bold mb-4">Precio: {book.price}</p>
+			<p className="text-gray-900 font-bold mb-2">Precio: {book.price}</p>
+      <p className="text-gray-700 mb-2" onClick={handleBugSinopsis}>Sinopsis:</p>
 			<div className="flex items-center mb-4">
 				<label className="mr-2" htmlFor="quantity">Cantidad:</label>
 				<select
 					id="quantity"
 					value={quantity}
-					onChange={(e) => setQuantity(parseInt(e.target.value))}
+					onChange={handleQuantityChange}
 					className="border border-gray-300 rounded-md p-2"
 				>
 					{[...Array(10).keys()].map(num => (
@@ -46,8 +72,10 @@ const BookPage = () => {
 				Agregar al carrito
 			</button>
 		</div>
+
+    {showModal && <BugModal onClose={() => setShowModal(false)} />}
 	</section>
-  );
+	);
 }
 
 export default BookPage;

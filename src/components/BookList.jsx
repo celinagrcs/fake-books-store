@@ -4,6 +4,7 @@ import { useGame } from '../context/GameContext';
 import books from '../data/books.json'
 import BugModal from './BugModal';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 const BookList = () => {
   const { addToCart } = useCart();
@@ -13,7 +14,7 @@ const BookList = () => {
   const handleAddToCart = (book) => {
     if (Math.random() < 0.3) {
       alert("no se pudo agregar al carrito");
-      incrementProgress();
+      incrementProgress('add-to-cart');
       setShowModal(true);
     } else {
       const randomQuantity = Math.random() < 0.5 ? 1 : Math.floor(Math.random() * 4) + 1;
@@ -21,7 +22,7 @@ const BookList = () => {
         addToCart(book);
       }
       if (randomQuantity > 1) {
-        incrementProgress();
+        incrementProgress('quantity-cart');
         setShowModal(true);
       }
     }
@@ -29,12 +30,19 @@ const BookList = () => {
 
   const handleBugClick = (book) => {
     if (book.price === "$") {
-      incrementProgress();
+      incrementProgress('price');
       setShowModal(true);
     }
   }
 
+  const handleBugTitle = (book) => {
+    if (book.author === "William Shakespeare")
+    incrementProgress('book-title');
+    setShowModal(true);
+  }
+
   return (
+    <>
     <main className="bg-white min-h-screen p-6">
       <section className="container mx-auto p-4">
         <h2 className="font-extrabold text-4xl py-5 text-center text-[#2a2a2a] mt-5 mb-6">🐞 Libros Disponibles 🐞</h2>
@@ -48,7 +56,7 @@ const BookList = () => {
             <h3 className="text-base font-bold mb-2 hover:text-gray-800">
               <Link to={`/book/${book.id}`}>{book.title}</Link>
             </h3>
-            <p className="text-gray-700">Autor: {book.author}</p>
+            <p className="text-gray-700" onClick={() => handleBugTitle(book)}>Autor: {book.author}</p>
             <p className="text-gray-900 font-bold" onClick={() => handleBugClick(book)}>Precio: {book.price || "$"}</p>
             <button 
             className="w-full bg-[#dd7596] text-white py-2 px-4 rounded-lg hover:bg-[#e55872] transition-colors duration-200"
@@ -63,6 +71,8 @@ const BookList = () => {
 
       {showModal && <BugModal onClose={() => setShowModal(false)} />}
     </main>
+    <Footer />    
+    </>
   )
 }
 

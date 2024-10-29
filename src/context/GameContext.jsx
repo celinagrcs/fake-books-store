@@ -8,17 +8,19 @@ export const useGame = () => useContext(GameContext);
 
 export const GameProvider = ({ children }) => {
   const [progress, setProgress] = useState(0);
-  const [bugsFound, setBugsFound] = useState(0); 
+  const [bugsFound, setBugsFound] = useState(new Set()); 
 
-  const incrementProgress = () => {
-    if (bugsFound < 10) {
-      setBugsFound(bugsFound + 1);
-      setProgress((bugsFound + 1) * 10);
+  const incrementProgress = (bugId) => {
+    if (!bugsFound.has(bugId)) {
+      setProgress((prev) => prev + 10);
+      setBugsFound((prev) => new Set(prev).add(bugId))
     }
   };
 
+  const totalBugsFound = bugsFound.size;
+
   return (
-    <GameContext.Provider value={{ progress, incrementProgress }}>
+    <GameContext.Provider value={{ progress, incrementProgress, totalBugsFound }}>
       {children}
     </GameContext.Provider>
   );

@@ -2,7 +2,7 @@ import { useGame } from "../context/GameContext"
 
 
 const ProgressBar = () => {
-  const { progress } = useGame();
+  const { progress, totalBugsFound } = useGame();
 
   return (
     <div className="w-full flex justify-center mt-20">
@@ -11,6 +11,9 @@ const ProgressBar = () => {
         className="bg-[#de4d86] h-full rounded transition-all duration-300"
         style={{ width: `${progress}%` }}
       ></div>
+      <p className="mt-2 text-gray-700 font-semibold text-center">
+        Progreso: {progress}% - Bugs encontrados: {totalBugsFound}/10
+      </p>
     </div>
   </div>
   )

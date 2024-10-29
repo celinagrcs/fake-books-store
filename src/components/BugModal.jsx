@@ -18,7 +18,7 @@ const BugModal = ({ onClose }) => {
   if (!randomImage) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
     <div className="relative bg-white p-6 rounded shadow-md w-full max-w-md">
     <button 
         className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
@@ -32,7 +32,7 @@ const BugModal = ({ onClose }) => {
         <img src={randomImage} alt="" className="w-40 mb-4" />
       </div>
     </div>
-  </div>
+  </article>
   )
 }
 
