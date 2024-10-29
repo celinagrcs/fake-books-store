@@ -33,11 +33,12 @@ const BookPage = () => {
     setShowModal(true);
   };
 
-  const handleQuantityChange = (event) => {
-    setQuantity(Number(event.target.value)); // Cambia la cantidad basada en la selección del usuario
+  const handleQuantityChange = () => {
+    const randomQuantity = Math.floor(Math.random() * 10) + 1;
+    setQuantity(randomQuantity); 
     incrementProgress('quantity-change');
     setShowModal(true);
-  };
+  }
 
   return (
     <section className="flex flex-col md:flex-row items-center justify-center mt-24 p-4">
@@ -51,16 +52,16 @@ const BookPage = () => {
         <p className="text-gray-700 mb-2" onClick={handleBugSinopsis}>Sinopsis:</p>
         <div className="flex items-center mb-4">
           <label className="mr-2" htmlFor="quantity">Cantidad:</label>
-          <select
-            id="quantity"
-            value={quantity}
-            onChange={handleQuantityChange}
-            className="border border-gray-300 rounded-md p-2"
+        <select
+          id="quantity"
+          value={quantity}
+          onChange={handleQuantityChange} 
+          className="border border-gray-300 rounded-md p-2"
           >
-            {[...Array(10).keys()].map(num => (
-              <option key={num} value={num + 1}>{num + 1}</option>
-            ))}
-          </select>
+          {[...Array(10).keys()].map(num => (
+            <option key={num} value={num + 1}>{num + 1}</option>
+          ))}
+        </select>
         </div>
         <button 
           className="mt-4 bg-[#dd7596] text-white py-2 px-4 rounded"
