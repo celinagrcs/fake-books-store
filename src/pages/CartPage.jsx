@@ -25,7 +25,7 @@ const CartPage = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center mt-9">Carrito de Compras</h1>
+      <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 text-center mt-10">Carrito de Compras</h1>
       {cart.length === 0 ? (
         <div className="flex flex-col items-center">
           <p className="text-center text-gray-500 mb-2">No hay productos en el carrito </p>
