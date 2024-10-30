@@ -28,7 +28,7 @@ const CelebrationModal = ({ onClose }) => {
       <AiOutlineClose size={20} />
       </button>
       <h2 className="text-2xl font-bold mb-3 text-center">¡YEEY encontraste todos los bugs!</h2>
-      <p className="text-center mb-2">¡Muy bien! Gracias por la ayuda, espero que te haya gustado💕</p>
+      <p className="text-center mb-2">¡Gracias por la ayuda! espero que te haya gustado💕</p>
       <p className="text-center">PD: tenemos un reglito mas para vos🥰</p>
       <div className="flex justify-center items-center mt-8">
         <img src={pinguino} alt="" className="w-40 mb-4" />
