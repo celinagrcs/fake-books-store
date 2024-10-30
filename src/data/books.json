@@ -54,7 +54,7 @@
     "id": 8,
     "title": "From Lukov with Love",
     "author": "Mariana Zapata",
-    "price": "$",
+    "price": "$23.150",
     "image": "./assets/mariana.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "id": 9,
     "title": "Harry Potter y la piedra filosofal",
     "author": "J. K. Rowling",
-    "price": "$",
+    "price": "$20.200",
     "image": "./assets/harrypotter.jpg"
   },
   {
@@ -82,7 +82,7 @@
     "id": 9,
     "title": "Novela de Ajedrez",
     "author": "Stefan Zweig",
-    "price": "$",
+    "price": "$23.420",
     "image": "./assets/noveladeajedrez.jpg"
   }
 ]
